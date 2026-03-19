@@ -1,0 +1,23 @@
+# Instâncias de Node e dependências
+node_modules/
+dist/
+.next/
+
+# IDE e Logs
+.idea/
+.vscode/
+*.log
+npm-debug.log*
+
+# Variáveis de ambiente
+.env
+.env.*
+!.env.example
+
+# Arquivos de Agentes / Assistentes de IA
+.agent/skills
+.gemini/
+
+# Outros
+OSX
+.DS_Store
