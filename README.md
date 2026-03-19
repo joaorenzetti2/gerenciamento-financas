@@ -1,4 +1,4 @@
-# Renzas Finanças 💰
+# Gerenciamento Financeiro 💰
 
 Este é um projeto pessoal de **Gerenciamento de Finanças**, desenvolvido para simular o fluxo de caixa, despesas, faturas de cartão e receitas de forma intuitiva e fácil. O projeto foi construído separando o Frontend e o Backend em pastas no modelo monorepo.
 
