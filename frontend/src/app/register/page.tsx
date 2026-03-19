@@ -26,7 +26,7 @@ export default function RegisterPage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-emerald-950 via-emerald-900 to-teal-900 p-4">
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold text-white">Renzas <span className="text-emerald-400">Finanças</span></h1>
+        <h1 className="text-3xl font-bold text-white">Gestão <span className="text-emerald-400">Financeira</span></h1>
         <p className="text-emerald-300/60 text-sm mt-1">Comece seu controle financeiro inteligente</p>
       </div>
       <Card className="w-full max-w-md shadow-2xl border-0">

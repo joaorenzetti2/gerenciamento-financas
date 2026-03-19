@@ -1,0 +1,4 @@
+<svg xmlns="http://www.未来的.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <rect width="256" height="256" rx="64" fill="#047857"/>
+  <path d="M128 40V216M88 88C88 64 128 64 128 88C128 112 168 112 168 136C168 160 128 160 128 136M88 168C88 192 128 192 128 168" stroke="white" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

@@ -27,8 +27,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               <TrendingUp className="h-6 w-6 text-emerald-400" />
             </div>
             <div>
-              <h2 className="text-xl font-bold tracking-tight text-white">Renzas</h2>
-              <p className="text-xs text-emerald-400/80 font-medium tracking-wider uppercase">Finanças</p>
+              <h2 className="text-xl font-bold tracking-tight text-white">Gestão</h2>
+              <span className="text-emerald-400 text-sm font-medium tracking-wider">Financeira</span>
             </div>
           </div>
         </div>
