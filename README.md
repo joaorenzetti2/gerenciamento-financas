@@ -43,12 +43,21 @@ O projeto possui todos os recursos essenciais para se observar a vida financeira
 
 ## 🛠️ Como Rodar Localmente
 
-### 1. Iniciar o Banco de Dados
+### 1. Iniciar o Banco de Dados (Legado)
 Na raiz do projeto (ou na pasta backend), rode o ambiente Docker que irá subir o **PostgreSQL** e o **pgAdmin** (opcional para visualizar o DB).
 ```bash
 cd backend
 docker-compose up -d
 ```
+
+### 🐳 Rodar via Docker (Recomendado)
+Caso você queira rodar a **aplicação completa** (Backend + Frontend + Banco) de uma só vez, utilize o `docker-compose.yml` na raiz:
+```bash
+docker-compose up --build
+```
+*A aplicação estará disponível em `http://localhost:3001`.*
+
+---
 
 ### 2. Rodar o Backend
 Crie um arquivo `.env` baseado no `.env.example` dentro do `/backend` (com dados do banco e secret JWT).
