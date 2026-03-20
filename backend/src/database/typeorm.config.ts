@@ -5,6 +5,7 @@ export const getTypeOrmConfig = (configService: ConfigService): TypeOrmModuleOpt
   const url = configService.get<string>('DATABASE_URL');
 
   if (url) {
+    console.log('📦 Database: Using connection string (DATABASE_URL)');
     return {
       type: 'postgres',
       url,
@@ -18,6 +19,7 @@ export const getTypeOrmConfig = (configService: ConfigService): TypeOrmModuleOpt
     };
   }
 
+  console.log(`📡 Database: Falling back to discrete variables (Host: ${configService.get('DB_HOST', 'localhost')})`);
   return {
     type: 'postgres',
     host: configService.get<string>('DB_HOST', 'localhost'),
