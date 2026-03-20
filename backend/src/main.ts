@@ -1,23 +1,33 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { ValidationPipe } from '@nestjs/common';
+import { ValidationPipe, ClassSerializerInterceptor } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { Reflector } from '@nestjs/core';
+import helmet from 'helmet';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  app.use(helmet());
+
   app.enableCors({
-    origin: true,
+    origin: [
+      'http://localhost:3000',
+      'http://localhost:3001',
+      /\.vercel\.app$/, // Aceita qualquer subdomínio da Vercel para o deploy automático
+    ],
     credentials: true,
   });
 
   app.useGlobalPipes(
     new ValidationPipe({
-      whitelist: true, // Remove campos que não estão no DTO
-      forbidNonWhitelisted: true, // Gera erro se enviar campos excedentes
-      transform: true, // Transforma os payloads para instâncias das classes do DTO
+      whitelist: true,
+      forbidNonWhitelisted: true,
+      transform: true,
     }),
   );
+
+  app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)));
 
   const config = new DocumentBuilder()
     .setTitle('Gerenciador Financeiro Pessoal API')
